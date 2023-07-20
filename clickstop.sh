@@ -30,7 +30,7 @@ else
 	exit
 fi
 
-PROC=$(xdotool selectwindow getwindowpid)
+PROC=$(xprop _NET_WM_PID | awk '{print $3}')
 [ "$DEBUG" == "true" ] && echo $PROC > /dev/stderr
 CHILDREN=$(children $PROC) 
 [ "$DEBUG" == "true" ] && echo $CHILDREN > /dev/stderr
