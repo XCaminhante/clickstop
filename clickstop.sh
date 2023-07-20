@@ -2,7 +2,7 @@
 
 #Click on an x window to pause or resume
 #  This recursively obtains the child process tree of the whole application
-#requires xdotool, pgrep
+#requires xprop, pgrep
 DEBUG=false
 
 children() {
